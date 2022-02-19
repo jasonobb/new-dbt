@@ -1,0 +1,84 @@
+config:
+  partial_parse: true
+  printer_width: 120
+  send_anonymous_usage_stats: false
+  use_colors: true
+normalize:
+  outputs:
+    prod:
+      dataset: airbyte_csv_sql
+      keyfile_json:
+        auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
+        auth_uri: https://accounts.google.com/o/oauth2/auth
+        client_email: airbyte-storage@stage-etl.iam.gserviceaccount.com
+        client_id: '101409399847714079171'
+        client_x509_cert_url: https://www.googleapis.com/robot/v1/metadata/x509/airbyte-storage%40stage-etl.iam.gserviceaccount.com
+        private_key: '-----BEGIN PRIVATE KEY-----
+
+          MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDfTOtIXOyQ4cx4
+
+          XeaeaSuTLf4enWd2o62v1bJsCxO+ecLIeAiJj8uWdeI1RCrIueX2TYakvm4v6feS
+
+          WkTQIoJe1w0HcHeHAM4WtRUQOgROfE9RDrIX9zxRc5mlYII8R+Jhjr0+E7n8Lw9o
+
+          dAzigfbDmBt/w+y5oT8LLH5qdO0EhDig60KBWhzL67jYL7h/uwpAxAff2FXwyAvQ
+
+          VJphyro2RvdmCMPc2WAxmHJ8ciNwVPbCuE04Q3dBreC8XV5bM9Ew1MN+d4j/pioR
+
+          ny2xmH2GSx91DCHsSiKhnw2fZKuOVKTxw6jssaao+QD02+mq9ya6Sge/hsw9kxKa
+
+          PFqGMJHpAgMBAAECggEAJxWgjQ7uvUE4d8z/w7Rm0yEWvKcSZ/qoOQGvdCfQMePA
+
+          CzSvUdygZtqFWItw7adUL/NL4OQQB0Ttd2ljaAbSSOVdO3MdCL1EVUcmw6tT+6TY
+
+          gTiQRY+ZuCwCtaaZxRFT931zdD0hrZlTGhZN9wuGdJ/YGFnjwm4Nydfk3J9QqRxj
+
+          zCmAf+I+ta44y728hjCHNzAgTNawLVcxACYigbUUXig9DRYgaCPs8AkxywqKT7iS
+
+          rTVI6DTXkz7RLphz2JHvt6Tm/6whFDUHgBY0aUpNrGrP0y8leaiW0BBEb/G6kK3o
+
+          Q8uYxA5JQlSS1pG6WIZJjEJhv3GRgSyOLCBgIsqF/QKBgQD2kTQtkSQ9xJVUJlvb
+
+          6WpkvEut9E6SUXkByrtvoWu7dAYSCCLEcL8FMNrc6JnZIpXynGrouoVU1iNUBjqv
+
+          D68UuV6b/CYcDxgOHI8dbrqknFmCYSROWG/0tLATiwKb4nUqku/OPXpNVAvcdzdr
+
+          4M8gPE395DsnuDJ4iUEyxh6hIwKBgQDn19lBw84VTj2WnnHFmicEGpcGxGTlV8Yp
+
+          FGnzm/slhLYq/TG7K6TDwqxy0w/aIcL603CKG1/TulWU3s40WW1L+asThbrQCujE
+
+          mvmZ8mttmM9lX86Mer55KhSoy7yuBlYM3eeMOaBBPN9Hoxmz8qAidzOhXyNcgmKx
+
+          IIYeSLm/gwKBgBgZ3WXO2CIJgyc0kKoQSMwL88HPLZbzy8Y3ENc6ihNKpgVBMlTN
+
+          SH6zZdFOEyu8S7fpPjH9eWbvf4iJC1dtSwnVjL/mh7saZpmKhRq1Zh0NA1rRMAFQ
+
+          d7ENsGBYqCqgmh9NOY+JRtkkK/yi0pIC6XwXKPB2TKn3QUey8uKJpxjNAoGBAOQJ
+
+          ZdMO0cwY+fEFBWjT995MfRIV6BvAmtNbFd+cI4nCoB9mjRzJj7VQ7KfAO85U+OAX
+
+          SpE83aN2mqjkAbRx5VQeTYvVNGte35ZJzIoEbHAPJqdSdems7V5l6o4gXwRYjRj4
+
+          xsAhCiRAyGlA3o4lbiaYUns+BZz/Ti1kjSaKZ9EbAoGAHxlYQ61SwbfbKCpNUPQf
+
+          qi+ZcPR2oEcH/O7ixipVTwFdcRmQNkEDbjD5R37vBjxdl6dg7afEUE//vIij5UDI
+
+          Iig0+Jpgou+H0AFZvI8mrhyo5AtKFR5ITCLAcssbsoxbmNlynQnUYN+5sjt7y3LO
+
+          MQiqE/2iS+nUOXEkQh89wes=
+
+          -----END PRIVATE KEY-----
+
+          '
+        private_key_id: 9b839036c4af4227a01ee779562232a049fac8d1
+        project_id: stage-etl
+        token_uri: https://oauth2.googleapis.com/token
+        type: service_account
+      location: US
+      method: service-account-json
+      priority: interactive
+      project: stage-etl
+      retries: 3
+      threads: 8
+      type: bigquery
+  target: prod
