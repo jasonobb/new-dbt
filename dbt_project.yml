@@ -19,7 +19,7 @@ source-paths: ["models"]
 docs-paths: ["docs"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
-seed-paths: ["data"]
+data-paths: ["data"]
 macro-paths: ["macros"]
 
 target-path: "../build"  # directory which will store compiled SQL files
